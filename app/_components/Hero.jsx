@@ -18,7 +18,7 @@ function Hero() {
                         <Button className='bg-red-500'>Sell</Button>
                     </div>
                 </div>
-                <div className='flex justify-center items-center -mt-6'>
+                <div className='flex justify-center items-center -mt-4'>
                     <Image src={'/placeholder.png'} alt='placeholder' width={300} height={400} />
                 </div>
             </div>
