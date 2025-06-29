@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Funnel_Display } from 'next/font/google'
 import Provider from "./Provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 
 export const metadata = {
@@ -13,17 +14,19 @@ const AppFont = Funnel_Display({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={AppFont.className}
-      >
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={AppFont.className}
+        >
 
-        <Provider>
-          {children}
-        </Provider>
+          <Provider>
+            {children}
+          </Provider>
 
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
 
