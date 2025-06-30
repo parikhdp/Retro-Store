@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
+import { UserButton } from '@clerk/nextjs'
 import { ShoppingBagIcon } from 'lucide-react'
-import React from 'react'
 
 function Header() {
 
@@ -25,7 +25,7 @@ function Header() {
 
       <ul className='hidden md:flex gap-5 '>
         {MenuList.map((menu, index) => (
-          <li key={menu.name} className='px-2 p-1 font-bold cursor-pointer hover:border-2 hover:vorder-white'>{menu.name} </li>
+          <li key={index} className='px-2 p-1 font-bold cursor-pointer hover:border-2 hover:vorder-white'>{menu.name} </li>
         ))}
       </ul>
 
@@ -34,6 +34,7 @@ function Header() {
         <Button className='bg-red-500 text-black hover:bg-red-600 '>
           Start Selling
         </Button>
+        <UserButton/>
       </div>
     </div>
   )
